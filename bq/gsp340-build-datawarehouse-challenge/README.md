@@ -1,4 +1,4 @@
-# Qwiklab solution for the challenge GSP340 
+# Qwiklabs GSP340 
 
 Qwiklabs [GSP340](https://www.qwiklabs.com/focuses/14341?parent=catalog)
 

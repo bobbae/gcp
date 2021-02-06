@@ -1,4 +1,4 @@
-# Qwiklab solution for the challenge gsp340 
+# Qwiklab solution for the challenge GSP340 
 
 Qwiklabs challenge solution for 
 https://www.qwiklabs.com/focuses/14341?locale=zh_TW&parent=catalog

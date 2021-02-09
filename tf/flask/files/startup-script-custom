@@ -1,0 +1,9 @@
+#!/bin/bash
+echo starting script
+
+sudo apt-get update
+sudo apt-get install -yq build-essential python-pip rsync wget
+pip install flask
+wget https://raw.githubusercontent.com/bobbae/gcp/main/tf/flask/app.py
+
+echo end of script

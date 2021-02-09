@@ -28,6 +28,7 @@ resource "google_compute_instance" "default" {
 sudo apt-get update
 sudo apt-get install -yq build-essential python-pip rsync wget
 pip install flask
+wget https://raw.githubusercontent.com/bobbae/gcp/main/tf/flask/app.py
 SCRIPT
 
  network_interface {
@@ -40,11 +41,9 @@ SCRIPT
 
  metadata = {
    ssh-keys = "${var.ssh_user}:${file("~/.ssh/id_rsa.pub")}"
+   startup-script = module.startup-scripts.content
+   startup-script-custom  = file("${path.module{/files/startup-script-custom")
  }
-}
-
-output "ip" {
-   value =  google_compute_instance.default.network_interface.0.access_config.0.nat_ip
 }
 
 resource "google_compute_firewall" "default" {

@@ -1,0 +1,4 @@
+CREDENTIALS_FILE.json
+*.backup
+*~
+*.tfstate

@@ -10,13 +10,15 @@ $ terraform apply -var "project=$(gcloud config get-value project)" -auto-approv
 
 The IP will be printed.
 Use ssh to copy and execute scripts.
+
 ```
-$ scp files/startup-script-custom  XXX-ip-printed-after-apply
-$ ssh XXX-ip ./startup-script-custom
-$ ssh XXX-ip python app.py
+$ export XXXIP=$(terraform output ip)
+$ scp files/startup-script-custom $XXXIP 
+$ ssh $XXXIP ./startup-script-custom
+$ ssh $XXXIP python app.py
 ```
 
-Browse to XXX-ip:5000.
+Browse to $XXXIP:5000.
 
 
 When done, remove the VM.

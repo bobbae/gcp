@@ -1,10 +1,15 @@
 // Configure the Google Cloud provider
 provider "google" {
+// version = "~> 2.9.0"
 // do not use json file. just use gcloud credentials
 // credentials = file("CREDENTIALS_FILE.json")
  project     = var.project
  region      = var.region
 }
+
+//module "startup-script-lib" {
+//  source = "git::https://github.com/terraform-google-modules/terraform-google-startup-scripts.git?ref=v0.1.0"
+//}
 
 // Terraform plugin for creating random ids
 resource "random_id" "instance_id" {
@@ -24,12 +29,11 @@ resource "google_compute_instance" "default" {
  }
 
 // Make sure flask is installed on all new instances for later steps
- metadata_startup_script = <<SCRIPT
-sudo apt-get update
-sudo apt-get install -yq build-essential python-pip rsync wget
-pip install flask
-wget https://raw.githubusercontent.com/bobbae/gcp/main/tf/flask/app.py
-SCRIPT
+// metadata_startup_script = <<SCRIPT
+//sudo apt-get update
+//sudo apt-get install -yq build-essential python-pip rsync wget
+//pip install flask
+//SCRIPT
 
  network_interface {
    network = "default"
@@ -41,8 +45,8 @@ SCRIPT
 
  metadata = {
    ssh-keys = "${var.ssh_user}:${file("~/.ssh/id_rsa.pub")}"
-   startup-script = module.startup-scripts.content
-   startup-script-custom  = file("${path.module{/files/startup-script-custom")
+//   startup-script = "${module.startup-script-lib.content}"
+//   startup-script-custom  = file("${path.module}/files/startup-script-custom")
  }
 }
 

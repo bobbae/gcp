@@ -1,5 +1,11 @@
 # Unscientific benchmark to show performance of gcsfuse vs. gcs.
 
+## What is GCSFUSE
+
+[GCSFUSE](https://cloud.google.com/storage/docs/gcs-fuse) allows you to mount GCS buckets as file systems on Linux or MacOS. It is [Open Source](https://github.com/GoogleCloudPlatform/gcsfuse).
+
+[This](https://www.examtopics.com/discussions/google/view/7020-exam-professional-cloud-architect-topic-1-question-6/) Google Professional Cloud Archtect exam question brings up an interesting issue related to the performance of GCS vs GCSFUSE. Which is faster?  Does use of GCSFUSE make sense? 
+
 1. Create/use service account with "storage admin" role and download the key in json format.
 
 2. activate service account

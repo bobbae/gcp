@@ -38,5 +38,6 @@ execute-workflow: deploy-workflow
 	gcloud workflows execute workflow
 
 get-workflow-result: execute-workflow
+	#PROJ := $(shell gcloud config list --format='value(core.project)')
 	EXE_NAME := $(shell gcloud workflows executions list  workflow --format 'value(NAME)')
 	gcloud workflows executions describe $(EXE_NAME) --workflow workflow

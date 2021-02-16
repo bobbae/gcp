@@ -1,0 +1,30 @@
+- randomgenFunction:
+    call: http.get
+    args:
+        url: https://us-central1-sada-univ-sess-1-94252.cloudfunctions.net/randomgen
+    result: randomgenResult
+- multiplyFunction:
+    call: http.post
+    args:
+        url: https://us-central1-sada-univ-sess-1-94252.cloudfunctions.net/multiply
+        body:
+            input: ${randomgenResult.body.random}
+    result: multiplyResult
+- logFunction:
+    call: http.get
+    args:
+        url: https://api.mathjs.org/v4/
+        query:
+            expr: ${"log(" + string(multiplyResult.body.multiplied) + ")"}
+    result: logResult
+- floorFunction:
+    call: http.post
+    args:
+        url: https://floor-zik4yg7plq-uc.a.run.app
+        auth:
+            type: OIDC
+        body:
+            input: ${logResult.body}
+    result: floorResult
+- returnResult:
+    return: ${floorResult}

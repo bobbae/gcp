@@ -1,4 +1,5 @@
 # replace all XXX prefixed strings 
+SHELL=/bin/bash
 BUCKET=XXXput-your-bucket-name-here
 PROJECT_NAME=XXX-your-proj-name
 PROJECT_ID=XXX-your-proj-ID

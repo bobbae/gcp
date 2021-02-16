@@ -1,64 +1,42 @@
 include config.mk
 
-.PHONY :
-default:
+.PHONY : default deploy-function-randomgen deploy-function-multiply test-function-randomgen test-function-multiply build-floor deploy-cloud-run-floor template-workflow create-service-account deploy-workflow execute-workflow get-workflow-result
 
-.PHONY :
-do-everything: 
-	make deploy-function-randomgen
-	make deploy-function-multiply
-	make build-floor
-	make deploy-cloud-run-floor
-	make template-workflow
-	make create-service-account
-	make deploy-workflow
-	make execute-workflow
-	make get-workflow-result
+default: get-workflow-result
 
-.PHONY :
 deploy-function-randomgen:
 	cd randomgen; gcloud functions deploy randomgen --runtime python37 --trigger-http --allow-unauthenticated
 
-.PHONY :
-deploy-function-multiply:
+deploy-function-multiply: deploy-function-randomgen
 	cd multiply; gcloud functions deploy multiply --runtime python37 --trigger-http --allow-unauthenticated
 
-.PHONY :
 test-function-randomgen:
 	curl $(gcloud functions describe randomgen --format='value(httpsTrigger.url)')
 
-.PHONY :
 test-function-multiply:
 	curl $(gcloud functions describe multiply --format='value(httpsTrigger.url)') -X POST -H "content-type: application/json" -d '{"input": 5}'
 
-.PHONY :
-build-floor:
+build-floor: deploy-function-multiply
 	cd floor; gcloud builds submit --tag gcr.io/$(PROJECT_ID)/floor 
 
-.PHONY :
-deploy-cloud-run-floor:
+deploy-cloud-run-floor: build-floor
 	gcloud run deploy floor --platform managed --no-allow-unauthenticated
 
-.PHONY :
-template-workflow:
-	APP_URL=$(gcloud run services list --platform managed --format 'value(URL)')
+template-workflow: deploy-cloud-run-floor
+	APP_URL := $(shell gcloud run services list --platform managed --format 'value(URL)')
 	REGION=$(REGION) PROJECT_ID=$(PROJECT_ID) RUNAPP_URL=$(APP_URL) ./templater workflow.tmpl > workflow.yaml
 	./templater workflow.tmpl > workflow.yaml
 
-.PHONY :
-create-service-account:
+create-service-account: template-workflow
 	gcloud iam service-accounts create workflows-sa
 	gcloud projects add-iam-policy-binding $(PROJECT_ID) --member "serviceAccount:workflows-sa@$(PROJECT_ID).iam.gserviceaccount.com" --role "roles/run.invoker"
 
-.PHONY :
-deploy-workflow:
+deploy-workflow: create-service-account
 	gcloud workflows deploy workflow --source workflow.yaml --service-account  workflows-sa@$PROJECT_ID.iam.gserviceaccount.com
 
-.PHONY :
-execute-workflow:
+execute-workflow: deploy-workflow
 	gcloud workflows execute workflow
 
-.PHONY :
-get-workflow-result:
-	EXE_NAME=$(gcloud workflows executions list  workflow --format 'value(NAME)')
+get-workflow-result: execute-workflow
+	EXE_NAME := $(shell gcloud workflows executions list  workflow --format 'value(NAME)')
 	gcloud workflows executions describe $(EXE_NAME) --workflow workflow

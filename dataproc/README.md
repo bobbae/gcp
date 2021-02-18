@@ -1,4 +1,3 @@
-# Spark on GCP
 
 ## Dataproc
 

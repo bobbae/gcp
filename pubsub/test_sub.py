@@ -2,15 +2,16 @@ from concurrent.futures import TimeoutError
 from google.cloud import pubsub_v1
 import argparse
 
+subscriber = pubsub_v1.SubscriberClient()
 
 def sub(project_id, subscription_id):
     timeout = 5.0
-    subscriber = pubsub_v1.SubscriberClient()
     subscription_path = subscriber.subscription_path(project_id, subscription_id)
-    print(subscription_path)
+
     def callback(message):
         print(f"Received {message}.")
         message.ack()
+
     streaming_pull_future = subscriber.subscribe(subscription_path, callback=callback)
     print(f"Listening for messages on {subscription_path}...\n")
     with subscriber:

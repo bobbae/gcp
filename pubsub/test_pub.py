@@ -1,6 +1,7 @@
-import os
 import argparse
+from google.cloud import pubsub_v1
 
+publisher = pubsub_v1.PublisherClient()
 
 def pub(project_id, topic_id, message):
     topic_path = publisher.topic_path(project_id, topic_id)

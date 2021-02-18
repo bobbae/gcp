@@ -2,9 +2,9 @@ import argparse
 
 from google.cloud import bigquery
 
+client = bigquery.Client()
 
 def table_insert_rows(table_id):
-    client = bigquery.Client()
 
     # TODO(developer): Set table_id to the ID of table to append to.
     # table_id = "your-project.your_dataset.your_table"

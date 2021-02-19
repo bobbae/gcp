@@ -20,6 +20,9 @@ successful processing of the message.
 
 Originally from https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/storage/cloud-client/notification_polling.py
 
+Modified to insert rows of data to bigquery dataset table each time notification
+is received when user uploads files to the GCS bucket.
+
 This application will work with any subscription configured for pull rather
 than push notifications. If you do not already have notifications configured,
 you may consult the docs at

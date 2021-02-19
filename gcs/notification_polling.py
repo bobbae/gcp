@@ -18,6 +18,8 @@
 Cloud Pub/Sub subscription, parse the incoming message, and acknowledge the
 successful processing of the message.
 
+Originally from https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/storage/cloud-client/notification_polling.py
+
 This application will work with any subscription configured for pull rather
 than push notifications. If you do not already have notifications configured,
 you may consult the docs at
@@ -41,11 +43,13 @@ below:
    $ gcloud beta pubsub subscriptions create testsubscription --topic=testtopic
 
 6. Run this program:
-   $ python notification_polling.py my-project-id testsubscription
+   $ python notification_polling.py my-project-id testsubscription project.dataset.table
 
 7. While the program is running, upload and delete some files in the testbucket
    bucket (you could use the console or gsutil) and watch as changes scroll by
-   in the app.
+   in the app.  
+
+8. verify new data inserted into the table in bigquery dataset.
 """
 
 import argparse

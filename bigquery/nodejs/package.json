@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@google-cloud/bigquery": "^5.5.0"
+  }
+}

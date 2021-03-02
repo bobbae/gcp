@@ -2,7 +2,7 @@
 
 https://cloud.google.com/spanner/docs/getting-started/nodejs
 
-````
+```
 $ npm i @google-cloud/spanner
 $ gcloud spanner instances create test-instance --config=regional-us-central1 \
     --description="Test Instance" --nodes=1

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@google-cloud/spanner": "^5.5.0",
+    "yargs": "^16.2.0"
+  }
+}

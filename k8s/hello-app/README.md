@@ -1,11 +1,19 @@
 # Hello Application example
 
+
+https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
+
+Modified with additional /podinfo to lookup information on pods
+from within k8s cluster.
+
+Install vendor/ modules so that docker build can succeed.
 ```
 $ go mod vendor
 ```
 
+Assume that you have GKE cluster running.
+Build and deploy into cluster.
 
-https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
 
 ```
 $ docker build -t gcr.io/${PROJECT}/hello-app:v2 .

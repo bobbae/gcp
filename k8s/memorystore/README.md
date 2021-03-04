@@ -29,6 +29,7 @@ https://cloud.google.com/memorystore/docs/redis/connect-redis-instance-gke
 
 ```
 $ gcloud compute zones list
+$ gcloud config set compute/zone us-central1-a
 $ gcloud container clusters create visitcount-cluster --num-nodes=3 --enable-ip-alias
 $ kubectl get nodes
 ```

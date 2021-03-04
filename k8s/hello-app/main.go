@@ -60,15 +60,15 @@ func podInfo(w http.ResponseWriter, r *http.Request) {
 	// Examples for error handling:
 	// - Use helper functions e.g. errors.IsNotFound()
 	// - And/or cast to StatusError and use its properties like e.g. ErrStatus.Message
-	_, err = clientset.CoreV1().Pods("default").Get(context.TODO(), "hello-app-XXXX", metav1.GetOptions{})
+	_, err = clientset.CoreV1().Pods("default").Get(context.TODO(), "hello-app", metav1.GetOptions{})
 	if errors.IsNotFound(err) {
-		fmt.Fprintf(w, "Pod example-xxxxx not found in default namespace\n")
+		fmt.Fprintf(w, "Pod hello-app not found in default namespace\n")
 	} else if statusError, isStatus := err.(*errors.StatusError); isStatus {
 		fmt.Fprintf(w, "Error getting pod %v\n", statusError.ErrStatus.Message)
 	} else if err != nil {
 		panic(err.Error())
 	} else {
-		fmt.Fprintf(w, "Found example-xxxxx pod in default namespace\n")
+		fmt.Fprintf(w, "Found hello-app pod in default namespace\n")
 	}
 
 	fmt.Fprintf(w, "Hello, world!\n")

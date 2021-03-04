@@ -26,7 +26,7 @@ $ kubectl expose deployment hello-app2 --name=hello-app-service2 --type=LoadBala
 $ kubectl get svc
 ```
 
-When EXTERNAL-IP is filled in (not pending). Do curl https://IP/podinfo
+When EXTERNAL-IP is filled in (not pending). Do curl https://EXTERNAL-IP/podinfo
 
 You will need to create role binding which will grant the default service account view permissions if you have RBAC enabled on your cluster.
 

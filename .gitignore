@@ -5,6 +5,9 @@ appengine-generated/
 !.editorconfig
 !.phpcs.xml.dist
 
+.terraform/
+.terraform.d/
+
 
 # node.js
 # ignore node/grunt dependency directories

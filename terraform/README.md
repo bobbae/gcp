@@ -1,5 +1,6 @@
 # terraform
 
+lots examples and usable modules here:
 https://registry.terraform.io/modules/terraform-google-modules/
 
 

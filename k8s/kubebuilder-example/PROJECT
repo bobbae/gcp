@@ -1,0 +1,7 @@
+domain: example.org
+repo: kubebuilder-example
+resources:
+- group: ship
+  kind: Frigate
+  version: v1beta1
+version: "2"

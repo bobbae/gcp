@@ -1,0 +1,9 @@
+apiVersion: ship.example.org/v1beta1
+kind: Frigate
+metadata:
+  name: frigate-sample
+spec:
+  # Add fields here
+  foo: bar
+  oof: rab
+  ddd: adf

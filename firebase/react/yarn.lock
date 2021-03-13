@@ -9571,7 +9571,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
-"react-scripts@4.0.2":
+"react-scripts@^4.0.2":
   "integrity" "sha512-okaWNaGDGtnXyM2CLMUl8gYZnAubgxEulC40FYjsxn5bbj+G/mDINdy24wHz4Vypb/LWtIe8rdBU78k/74v8Mw=="
   "resolved" "https://registry.npmjs.org/react-scripts/-/react-scripts-4.0.2.tgz"
   "version" "4.0.2"

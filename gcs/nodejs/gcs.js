@@ -9,7 +9,6 @@ const storage = new Storage({
 
 // more options example https://github.com/googleapis/nodejs-storage/blob/master/samples/createNewBucket.js
 async function createBucket(bucketName) {
-
   async function createBucketTry() {
     await storage.createBucket(bucketName);
     console.log(`Bucket ${bucketName} created.`);
@@ -40,6 +39,7 @@ async function uploadFile(bucketName, filename, destination) {
   }
   uploadFileTry().catch(console.error)
 }
+
 async function listFiles(bucketName) {
   
   async function listFilesTry() { 
@@ -72,4 +72,30 @@ async function listBuckets(){
   return [buckets]
 }
 
-module.exports = { listBuckets, createBucket, downloadFile, uploadFile, listFiles}
+
+async function getMetadata(bucketName, filename){
+    async function getMetadataTry() {
+	const [metadata] = await storage.bucket(bucketName).file(filename).getMetadata()
+	return [metadata];
+    }
+    const [metadata] = await getMetadataTry(bucketName, filename).catch(console.error)
+    return [metadata]
+}
+
+async function setMetadata(bucketName, filename, metadata) {
+    async function setMetadataTry() {
+	const file = await storage.bucket(bucketName).file(filename);
+	var apiResponse;
+	file.setMetadata(metadata).then(function(data) {
+	    apiResponse = data[0];
+	});
+	return apiResponse;
+    }
+    const res = await setMetadataTry(bucketName, filename, metadata).catch(console.error)
+    return res;
+}
+
+module.exports = { 
+    listBuckets, createBucket, downloadFile, 
+    uploadFile, listFiles, getMetadata, setMetadata
+};

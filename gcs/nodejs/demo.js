@@ -26,7 +26,22 @@ async function downloadDemo() {
 
 async function listFilesDemo() {
    const [files] = await gcs.listFiles(bucketName)
-   console.log('files',filess)
+   console.log('files',files)
 }
 
-listFilesDemo()
+//listFilesDemo()
+
+async function setMetadataDemo() {
+    const res = await gcs.setMetadata(bucketName, fileName, { metadata: { "abc": "def", "hello": "goodbye" }});
+    console.log('metadata set', res)
+}
+setMetadataDemo()
+
+async function getMetadataDemo() {
+    const [metadata] = await gcs.getMetadata(bucketName, fileName)
+    console.log('metadata', metadata);
+}
+
+getMetadataDemo();
+
+

@@ -36,12 +36,16 @@ async function test1() {
     }
 
     const under30 = await db.collection('users').where('age', '<=', 40).get();
+    console.log('under30',under30);
+    
+    /*
     const liam2 = db.collection('users').doc('lragozzine');
     const observer = liam2.onSnapshot(snapshot => {
 	console.log(`changes: ${snapshot}`);
     }, err => {
 	console.log(`Error: ${err}`);
     });
+    */
 }
 
 (async() => {

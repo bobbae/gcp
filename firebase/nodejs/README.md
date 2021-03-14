@@ -1,1 +1,1 @@
-npm i firebase-admin --save
+> npm i firebase-admin --save

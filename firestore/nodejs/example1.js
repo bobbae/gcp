@@ -1,3 +1,6 @@
+//https://github.com/firebase/snippets-node/blob/master/firestore/main/index.js
+//https://firebase.google.com/docs/firestore/query-data/queries
+
 const debug = require('debug')('firestore-snippets-node');
 
 // [START firestore_deps]

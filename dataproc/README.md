@@ -8,3 +8,7 @@
 
 * [GSP271](https://www.qwiklabs.com/focuses/3390?parent=catalog)
 * https://github.com/GoogleCloudPlatform/data-science-on-gcp/blob/master/06_dataproc/quantization.ipynb
+
+## Example
+
+https://mulianaraul.medium.com/running-etl-spark-job-through-dataproc-an-ephermal-cluster-with-workflow-templates-df186c3608a4

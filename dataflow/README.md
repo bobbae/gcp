@@ -11,3 +11,7 @@ gcloud dataflow jobs run df-job-1 --gcs-location gs://dataflow-templates/latest/
 ## flex templates
 
 Under `flex-templates/`
+
+## Deleting dataflow jobs
+
+You *cannot* delete dataflow jobs as of now (March, 2021). This feature needs to be implemented by Google.

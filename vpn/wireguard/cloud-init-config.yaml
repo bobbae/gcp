@@ -1,0 +1,68 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - iptables
+  - wireguard
+write_files:
+  - content: |
+      net.ipv4.ip_forward=1
+    path: /etc/sysctl.d/99-wireguard.conf
+    permissions: '0644'
+  - content: |
+      #!/usr/bin/env bash
+      set -e
+
+      # get latest wireguard configuration from the secret manager and store it locally
+      gcloud beta secrets versions access latest --secret wg_config > /etc/wireguard/wg0.conf
+      chmod 0600 /etc/wireguard/wg0.conf
+
+      # get other sensitive data
+      hostname="$(gcloud beta secrets versions access latest --secret wg_hostname)"
+      cf_api_token="$(gcloud beta secrets versions access latest --secret wg_cf_api_token)"
+      cf_zone_id="$(gcloud beta secrets versions access latest --secret wg_cf_zone_id)"
+
+      # create or update the Cloudflare DNS record
+      if ip=$(curl -fs ifconfig.me); then
+              echo "Checking if DNS record $hostname exists in Cloudflare"
+              dns_check=$(curl -sX GET "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/dns_records?type=A&name=${hostname}" \
+              -H "Authorization: Bearer $cf_api_token" \
+              -H "Content-Type: application/json" \
+              | python3 -c "import sys, json; f=json.load(sys.stdin); print('{};{}'.format(f['result'][0]['content'],f['result'][0]['id'])) if 'result' in f else print('EE')")
+              IFS=';' read -ra response <<< "${dns_check}"
+              if [[ "${response[0]}" == "${ip}" ]]; then
+                      echo "DNS record ${hostname} OK: ${ip}. No need to update."
+              else
+                      echo "Updating existing A record $hostname to $ip"
+                      curl -o /dev/null -fsX PUT "https://api.cloudflare.com/client/v4/zones/${cf_zone_id}/dns_records/${response[1]}" \
+                      -H "Authorization: Bearer ${cf_api_token}" \
+                      -H "Content-Type: application/json" \
+                      -d "{\"type\": \"A\", \"name\": \"${hostname}\", \"content\": \"${ip}\", \"proxied\": false}"
+              fi
+      else
+              echo "Problem detecting current IP address. Exiting"
+      fi
+    path: /usr/local/bin/wg_dns_updater.sh
+    permissions: '0755'
+  - content: |
+      [Unit]
+      Description=wg-dns-updater script
+      After=network.target
+
+      [Service]
+      Type=oneshot
+      RemainAfterExit=yes
+      ExecStart=/usr/local/bin/wg_dns_updater.sh
+
+      [Install]
+      WantedBy=multi-user.target
+    path: /etc/systemd/system/wg-dns-updater.service
+    permissions: '0644'
+runcmd:
+  - [ sysctl, -p, /etc/sysctl.d/99-wireguard.conf ]
+  - [ systemctl, daemon-reload ]
+  - [ systemctl, enable, --now, --no-block, wg-quick@wg0.service ]
+  - [ systemctl, enable, --now, wg-dns-updater.service ]
+power_state:
+  mode: reboot
+  delay: 1
+  message: Rebooting after installation

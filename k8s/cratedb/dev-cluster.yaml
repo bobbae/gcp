@@ -1,0 +1,22 @@
+apiVersion: cloud.crate.io/v1
+kind: CrateDB
+metadata:
+  name: my-cluster
+  namespace: dev
+spec:
+  cluster:
+    imageRegistry: crate
+    name: crate-dev
+    version: 4.3.1
+  nodes:
+    data:
+    - name: default
+      replicas: 3
+      resources:
+        cpus: 4
+        disk:
+          count: 1
+          size: 4GiB
+          storageClass: default
+        heapRatio: 0.5
+        memory: 2Gi

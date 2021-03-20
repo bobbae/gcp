@@ -43,7 +43,6 @@ With `query.json`:
 
 ```
 {
-
   "query": "fetch gce_instance::compute.googleapis.com/instance/disk/read_bytes_count | within 5m"
 }
 ```

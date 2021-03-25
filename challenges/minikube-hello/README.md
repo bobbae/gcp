@@ -6,3 +6,8 @@
 
 https://github.com/learnk8s/kubernetes-challenge
 
+## What to submit
+
+* Commit your deployment related `yaml` files to the forked repository
+
+* Send us the URL to your repository

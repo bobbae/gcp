@@ -1,4 +1,4 @@
-# Challenge  Longest-compound words
+# Challenge:  Longest-compound words
 
 * First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 

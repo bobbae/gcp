@@ -23,18 +23,16 @@ read each non-blank line of text from the file `loomings.txt` available at
 
 https://gist.github.com/bobbae/259e195f11cea0183ea93d378946a737
 
-From within the program, copy the `loomings.txt` file into the `loomings` bucket.
-From within the program, print the total number of non-blank 
+* From within the program, copy the `loomings.txt` file into the `loomings` bucket.
+
+* From within the program, print the total number of non-blank 
 lines in the `loomings.txt`.
 
 * From within the program, create a file with a unique name containing 
 each  non-blank line of  text read from  the file.
-
 You may end up with lots of files. File-1, File-2, File-3, File-4, ..., etc.
-
 File-1 will contain the first line read from the file. File-2 will contain the second line
 read from the file, and so on.
-
 Each file should be stored inside the minio bucket named `loomings`.  Writing each file
 as an object inside the bucket should be done from within the program using the proper
 API.

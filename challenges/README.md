@@ -2,7 +2,7 @@
 
 
 * First, thank you for participating in the challenges!  We have tried hard to make sure you will not spend more than a few
-hours to complete your answer.  Please do not spend more time than a few hours!
+hours to complete your answer.  Please do not spend more than a few hours!
 
 * We still allow for 5 working days of calendar time so that
 you can find a few hours in your schedule.

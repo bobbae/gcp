@@ -19,9 +19,8 @@ is at https://docs.min.io/docs/java-client-quickstart-guide.html.  You do not ha
 to use Java. You can also use Go, Python, Javascript, .NET, Haskell, or REST API.
 
 * From within the program, using a scripting language or a programming language, 
-read each non-blank line of text from the file `loomings.txt` available at 
-
-https://gist.github.com/bobbae/259e195f11cea0183ea93d378946a737
+read each non-blank line of text from the file `loomings.txt` 
+available at https://gist.github.com/bobbae/259e195f11cea0183ea93d378946a737
 
 * From within the program, copy the `loomings.txt` file into the `loomings` bucket.
 

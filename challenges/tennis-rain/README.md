@@ -1,4 +1,4 @@
-# Challenge:  basketball-rain
+# Challenge:  tennis-rain
 
 * First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 
@@ -9,17 +9,17 @@ not have to code anything.  You can simply write down what you think in text.
 
 * Consider the following description:
 ```
-Suppose, from 4 basketball matches, John won 3 and Harry won only one.
+Suppose, from 4 tennis matches, Bob won 3 and Bill won only one.
 ```
 
-* Question 1:  If you have to bet on either John or Harry for the next match who would you bet on?
+* Question 1:  If you have to bet on either Bob or Bill for the next match who would you bet on?
 
-* Question 2: What is the percentage of the chance that Harry might win the next match?
+* Question 2: What is the percentage of the chance that Bill might win the next match?
 
 * Now, consider further:
 ```
 Now, add another factor to the match, which is rain. 
-When Harry won, it was raining. But, when John won, out of 3 matches, 1 
+When Bill won, it was raining. But, when Bob won, out of 3 matches, 1 
 time it was raining.
 
 By the way, the weather forecast says that there is an extremely high possibility of 
@@ -29,11 +29,11 @@ And the forecast is typically very accurate.
 
 * Question 3: Do you agree that even without thinking deeply, 
 you can tell that the comparison basis has 
-changed and chances of Harry winning have increased?
+changed and chances of Bill winning have increased?
 
 * Question 4: Who would you bet on as the winner of the next match?
 
-* Question 5: What is the percentage of the chance that Harry will win the next 
+* Question 5: What is the percentage of the chance that Bill will win the next 
 match given that it will rain tomorrow?
 
 ## What to submit

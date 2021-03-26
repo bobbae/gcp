@@ -3,7 +3,8 @@
 * First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 
 * Summary: Given the description, come up with a prediction. This is not necessarily a `coding test`. You do
-not have to code anything.  You can simply write down what you think in text.  
+not have to code anything.  You can simply write down what you think in text.   This is a quick challenge. You
+should only spend maybe five minutes thinking about it.
 
 ## Steps
 
@@ -36,14 +37,12 @@ changed and chances of Bill winning have increased?
 * Question 5: What is the percentage of the chance that Bill will win the next 
 match given that it will rain tomorrow?
 
-## What to submit
+## What to prepare for further discussion
 
 * Answers to questions 1 through 5.
 
 * Reasons for your answers in as much detail as possible.
 
-* Write down your answers and reasoning for the answers in a text file and place it into a public git repo or a gist.  Send us the URL.
-
-* Optionally, you can write code to prove your reasoning and send us the URL to the repo.
+* Be ready to discuss your answers and reasoning.
 
 

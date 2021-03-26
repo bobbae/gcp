@@ -2,7 +2,7 @@
 
 * First read the `Basic rules for challenges` first. It should be in a `README.md` one directory up from here.
 
-* Summary: Fork the following repository and deploy the application to minikube
+* Summary: Fork the following repository and deploy the application to minikube (https://minikube.sigs.k8s.io/docs/) 
 
 https://github.com/learnk8s/kubernetes-challenge
 

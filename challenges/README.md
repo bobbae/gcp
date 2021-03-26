@@ -7,7 +7,8 @@ hours to complete your answer.  Please do not spend more than a few hours!
 * We still allow for 5 working days of calendar time so that
 you can find a few hours in your schedule.
 
-* Your answer will be completely original and not based on someone else's work.
+* Your answer will be completely original and not based on someone else's work. We are aware some challenges are available with
+solutions from various websites.  If your solution is based on any previous solutions, please clearly indicate the source.
 
 * Please submit your answer via gitlab or github within 5 days of learning about the challenge.
 

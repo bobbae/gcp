@@ -40,4 +40,4 @@ and runs the program and produces the output with all of the necessary arguments
 
 * You are encouraged to provide any feedback, criticism, or points for improvements in a written form on these challenges presented to you.
 
-* *Your ability to follow the instructions carefully as written here is part of the evaluation*.
+* **Your ability to follow the instructions carefully as written here is part of the evaluation**.

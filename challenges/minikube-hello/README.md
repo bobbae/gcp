@@ -1,6 +1,6 @@
 # Challenge  Minikube-hello
 
-* First read the `Basic rules for challenges` first. It should be in a `README.md` one directory up from here.
+* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md) first. 
 
 * Summary: Fork the following repository and deploy the application to minikube (https://minikube.sigs.k8s.io/docs/) 
 

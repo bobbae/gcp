@@ -36,13 +36,14 @@ Each file should be stored inside the minio bucket named `loomings`.  Writing ea
 as an object inside the bucket should be done from within the program using the proper
 API.
 
-* From within the program, create a meta-data  for each file. 
-Each meta-data be a hash digest of the content of the file.
+* From within the program, create a meta-data for each file and attach the meta-data to that file. 
+Each meta-data should be a hash digest of the content of the file.
 For example, File-1 may have a meta-data `{ "Content-hash": "3dsdfwewa..." }` 
-which will contain hash digest of the File-1.  Writing meta-data and attaching to
+which will contain hash digest of the File-1. The hash digest can be SHA-1, SHA-256 or MD5.  Writing meta-data and attaching to
 the file object in the bucket should be done via `minio` API.
 
-* From within the program, list the files sorted based on the size of the file, in order, from smallest to largest based on the size (total bytes) of the content within the file. Print the name and size of each file on each line of the output.
+* From within the program, list the files sorted in order, from smallest to largest file based on the size (total bytes) of the content within the file. 
+Print the name and size of each file on each line of the output.
 
 * There will be one duplicate line in the `loomings.txt` file. Therefore, there will be two files that have the same hash digest of the content.  Print the name of the two files you created which contains a line from the `loomings.txt` that have the identical content.  Print  the original text line which is duplicated in loomings.txt. You may do the search 
 for the matching content digest hash by looking at the meta-data of each file object. Do this from within your program using the API.

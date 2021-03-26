@@ -64,6 +64,8 @@ shown below as an example, but should use the same basic structure.
 
 ```
 
+* Your solution for this part should be a program or a script.
+
 ## Part 2
 
 * Go to https://min.io/ and read the Overview https://min.io/product/overview
@@ -82,6 +84,8 @@ number to `MyMetadata` which is  an additional metadata for your file.
 
 * An easy way to
 create meta data for an object may be available in various APIs, e.g. https://github.com/mmm1513/pyminio whic happens to be for Python. You do not have to use Python or this API. 
+
+* Your solution to this part should be additional code to the program in Part 1.
 
 ## Part 3
 

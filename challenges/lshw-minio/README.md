@@ -92,4 +92,4 @@ create meta data for an object may be available in various APIs, e.g. https://gi
 * What kind of strategies can enhance search capability over large amount of machine data.  
 
 * What kind of cloud services can be used in addition to storing  data in an object storage like minio, s3 or gcs?  Can other services be used together? What do you gain by using other services with object storage services?
-* 
+

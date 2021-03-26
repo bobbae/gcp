@@ -1,12 +1,13 @@
 # Basic Rules for the Challenges 
 
-* Your answer will be completely original and not based on someone else's work.
 
-* In general, you should not spend more than a few
-hours to complete your answer.  
+* First, thank you for participating in the challenges!  We have tried hard to make sure you will not spend more than a few
+hours to complete your answer.  Please do not spend more time than a few hours!
 
 * We still allow for 5 working days of calendar time so that
 you can find a few hours in your schedule.
+
+* Your answer will be completely original and not based on someone else's work.
 
 * Please submit your answer via gitlab or github within 5 days of learning about the challenge.
 

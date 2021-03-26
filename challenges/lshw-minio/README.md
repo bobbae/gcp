@@ -77,9 +77,8 @@ easy way may be to use docker image at https://hub.docker.com/r/minio/minio/
 
 * FYI: Each object/file can have data which is the content as in our JSON machine data.  Each object/file can also have meta-data, which is data about data, attached to the file.
 
-* Create meta data for this object/file `machineinfo.json` that contains tag `NumberOfCores` with and integer value, e.g. { "NumberOfCores": 4}.  You will read
-the `NumberOfCores` information from your `machineinfo.json` content and create a meta data
-for the `machineinfo.json` file which is attached to the file.
+* Create meta data for this object/file `machineinfo.json` that contains tag `MyMetadata` with and integer value, e.g. { "MyMetadata": 14}.  You will assign a random
+number to `MyMetadata` which is  an additional metadata for your file.
 
 * An easy way to
 create meta data for an object may be available in various APIs, e.g. https://github.com/mmm1513/pyminio whic happens to be for Python. You do not have to use Python or this API. 
@@ -90,6 +89,7 @@ create meta data for an object may be available in various APIs, e.g. https://gi
 
 * Think of how you may deal with many hundreds of thousands of `machineinfo.json` files.
 
-* What kind of meta data would you store per object to enhance search capability over large amount of machine data.  
+* What kind of strategies can enhance search capability over large amount of machine data.  
 
-* What kind of additional methods would you consider to make the storage and searching of such machine data, aside from storing into an object storage like minio, s3 or gcs?
+* What kind of cloud services can be used in addition to storing  data in an object storage like minio, s3 or gcs?  Can other services be used together? What do you gain by using other services with object storage services?
+* 

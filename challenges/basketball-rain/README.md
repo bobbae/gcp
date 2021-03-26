@@ -2,7 +2,8 @@
 
 * First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 
-* Summary: Given the description, come up with a prediction. 
+* Summary: Given the description, come up with a prediction. This is not necessarily a `coding test`. You do
+not have to code anything.  You can simply write down what you think in text.  
 
 ## Steps
 
@@ -40,4 +41,9 @@ match given that it will rain tomorrow?
 * Answers to questions 1 through 5.
 
 * Reasons for your answers in as much detail as possible.
+
+* Write down your answers and reasoning for the answers in a text file and place it into a public git repo or a gist.  Send us the URL.
+
+* Optionally, you can write code to prove your reasoning and send us the URL to the repo.
+
 

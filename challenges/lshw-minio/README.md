@@ -1,4 +1,4 @@
-## Challenge lshw-minio
+# Challenge: lshw-minio
 
 * First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 

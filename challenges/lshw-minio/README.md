@@ -1,6 +1,6 @@
 ## Challenge lshw-minio
 
-* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md) first. 
+* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 
 * Summary: Fill out JSON data structure containing system information and store it as a file with metadata on minio object storage
 

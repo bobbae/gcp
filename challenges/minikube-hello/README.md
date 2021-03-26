@@ -1,10 +1,22 @@
 # Challenge  Minikube-hello
 
-* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md) first. 
+* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 
-* Summary: Fork the following repository and deploy the application to minikube (https://minikube.sigs.k8s.io/docs/) 
+* Summary: Fork a repository and deploy the application to minikube 
 
-https://github.com/learnk8s/kubernetes-challenge
+## Steps
+
+* Learn about minikube https://minikube.sigs.k8s.io/docs/ 
+
+* Deploy minikube on your computer
+
+* Fork https://github.com/learnk8s/kubernetes-challenge
+
+* Deploy the app to minikube
+
+* Update the forked repository with files used to deploy the app
+
+* Send URL to your forked repository
 
 ## What to submit
 

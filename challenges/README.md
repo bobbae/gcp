@@ -21,7 +21,7 @@ you can find a few hours in your schedule.
 
 * Whatever may be considered missing in the description of each challenge can be assumed to be intentional.  No further clarification will be provided.
 
-* Your understanding the description of the challenge in the presented form is part of the test.
+* Your understanding the description of the challenge in the presented form is part of the test as are the levels of completeness of your solutions.
 
 * Your abililty to come up with a solution for the problem as presented in each challenge description as written is part of the evaluation process. 
 

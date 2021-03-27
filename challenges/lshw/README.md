@@ -111,7 +111,9 @@ that can handle collection of data from multiple machines and creating the appro
             
 ```
 
-* Write the new version of the machine data JSON into a file called `machinedata-2.json`
+* Write the new program that updates the JSON structure and creates a new version of the machine data JSON into a file called `machinedata-2.json`
+
+* Save the program and the data from Part 1 and 2 into a public git repo and send the URL.  Make sure your machine data in JSON files do not contain any sensitive data that need to be secured by you.
 
 ## Part 3
 

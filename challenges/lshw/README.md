@@ -120,7 +120,7 @@ that can handle collection of data from multiple machines and creating the appro
 * Think of how you may deal with many hundreds of thousands of `machineinfo.json` files.
 
 * What kind of strategies can enhance search capability over large amount of machine data.  
-* 
+* How would you store this kind of JSON data into a database?  What kind of database would you use?
 * What kind of cloud services can be used in addition to storing  data in an object storage like minio, s3 or gcs?  Can other services be used together? What do you gain by using other services with object storage services?
 
 * Given the file like `machinedata.json`, how would you select a specific tag and value from the JSON structure via command line tool at a shell prompt? If you were using

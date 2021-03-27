@@ -19,20 +19,20 @@ should only spend maybe five minutes thinking about it.
 * Question 2: What is the percentage of the chance that Bill might win the next match?
 
 * Now, consider further:
-```
-Now, add another factor to the match,
-which is rain. 
-When Bill won, it was raining. 
-But, when Bob won, out of 3 matches, 1 
-time it was raining.
 
-By the way, the weather forecast says 
-that there is an extremely high possibility 
-of rain on the day of the next match 
-which is tomorrow. 
-And the forecast is typically 
-very accurate.
-```
+   Now, add another factor to the match,
+   which is rain. 
+   When Bill won, it was raining. 
+   But, when Bob won, out of 3 matches, 1 
+   time it was raining.
+
+   By the way, the weather forecast says 
+   that there is an extremely high possibility 
+   of rain on the day of the next match 
+   which is tomorrow. 
+   And the forecast is typically 
+   very accurate.
+
 
 * Question 3: Do you agree that even without thinking deeply, 
 you can tell that the comparison basis has 

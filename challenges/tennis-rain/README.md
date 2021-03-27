@@ -10,7 +10,8 @@ should only spend maybe five minutes thinking about it.
 
 * Consider the following description:
 ```
-Suppose, from 4 tennis matches, Bob won 3 and Bill won only one.
+Suppose, from 4 tennis matches, 
+Bob won 3 and Bill won only one.
 ```
 
 * Question 1:  If you have to bet on either Bob or Bill for the next match who would you bet on?
@@ -19,13 +20,18 @@ Suppose, from 4 tennis matches, Bob won 3 and Bill won only one.
 
 * Now, consider further:
 ```
-Now, add another factor to the match, which is rain. 
-When Bill won, it was raining. But, when Bob won, out of 3 matches, 1 
+Now, add another factor to the match,
+which is rain. 
+When Bill won, it was raining. 
+But, when Bob won, out of 3 matches, 1 
 time it was raining.
 
-By the way, the weather forecast says that there is an extremely high possibility of 
-rain on the day of the next match which is tomorrow. 
-And the forecast is typically very accurate.
+By the way, the weather forecast says 
+that there is an extremely high possibility 
+of rain on the day of the next match 
+which is tomorrow. 
+And the forecast is typically 
+very accurate.
 ```
 
 * Question 3: Do you agree that even without thinking deeply, 

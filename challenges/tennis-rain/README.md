@@ -9,10 +9,10 @@ should only spend maybe five minutes thinking about it.
 ## Steps
 
 * Consider the following description:
-```
-Suppose, from 4 tennis matches, 
-Bob won 3 and Bill won only one.
-```
+
+   Suppose, from 4 tennis matches, 
+   Bob won 3 and Bill won only one.
+
 
 * Question 1:  If you have to bet on either Bob or Bill for the next match who would you bet on?
 

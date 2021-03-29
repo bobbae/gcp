@@ -12,7 +12,7 @@ you can find a few hours in your schedule. Please return your work to us within 
 * Your answer will be completely original and not based on someone else's work. We are aware some challenges are available with
 solutions from various websites.  If your solution is based on any previous solutions, please clearly indicate the source.
 
-* Please submit your answer via gitlab or github within 5 days of learning about the challenge.
+* Please submit your answer via gitlab or github within 48 hours of  learning about the challenge.
 
 * Please make your git repository publicly accessible when submitting your answers, and send us the URL.
 

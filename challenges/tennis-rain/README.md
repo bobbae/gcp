@@ -26,7 +26,7 @@ to think about.  We provide this challenge here so that we can save time during 
 
 * Now, consider further:
 
-   Now, add another factor to the match,
+   To make it more interesting, let us add another factor to the match,
    which is rain. 
    When Bill won, it was raining. 
    But, when Bob won, out of 3 matches, 1 

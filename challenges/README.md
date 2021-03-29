@@ -19,7 +19,7 @@ solutions from various websites.  If your solution is based on any previous solu
 
 * You can also use Codepen.io or Jupyter lab or equivalent to implement the solution and send us the publicly available link.
 
-* You can use any one of the following scripting or programming languages:  Python, Node.js,Java, Kotlin, Go, Rust.
+* You can use any one of the following scripting or programming languages:  Python, Node.js, Java, Kotlin, Go, Rust.  
 
 * The challenges are described in the final and complete form. 
 

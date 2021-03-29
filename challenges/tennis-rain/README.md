@@ -6,6 +6,12 @@
 not have to code anything.  You can simply write down what you think in text.   This is a quick challenge. You
 should only spend maybe five minutes thinking about it.
 
+## This is not a coding challenge
+
+If you are looking for a coding challenge to submit for review, please look under another sub directory.
+This challenge is for a possible discussion topic during subsequent interviews. It is something you spend five minutes
+to think about.  We provide this challenge here so that we can save time during the interview.
+
 ## Steps
 
 * Consider the following description:

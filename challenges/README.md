@@ -4,7 +4,7 @@
 * First, thank you for participating in the challenges!  We have tried hard to make sure you will not spend more than a few
 hours to complete your answer.  Please do not spend more than a few hours!
 
-* We still allow for 5 working days of calendar time so that
+* We still allow for 48 hours so that
 you can find a few hours in your schedule.
 
 * Your answer will be completely original and not based on someone else's work. We are aware some challenges are available with
@@ -16,7 +16,7 @@ solutions from various websites.  If your solution is based on any previous solu
 
 * You can also use Codepen.io or Jupyter lab or equivalent to implement the solution and send us the publicly available link.
 
-* You can use any one of the following scripting or programming languages: Bash, Python, Node.js, Deno, Ruby, Perl, C, C++, Java, Kotlin, C#, Go, Rust, Scala, Haskell, Ocaml, Smalltalk, Common LISP, clojure, or V.
+* You can use any one of the following scripting or programming languages:  Python, Node.js,Java, Kotlin, Go, Rust.
 
 * The challenges are described in the final and complete form. 
 

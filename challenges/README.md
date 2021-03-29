@@ -42,6 +42,8 @@ code, documentation, tests, design notes, etc.
 code and produce the results.  That is to say, the reviewer of your work should just be able to run one script to see that it compiles if necessary 
 and runs the program and produces the output with all of the necessary arguments and inputs required, without having to read line by line what you have created in your solutions.
 
+* Your repository should contain a README.md file which provides information about the code, algorithm, design, and other related facts about your solutions.
+
 * You are encouraged to provide any feedback, criticism, or points for improvements in a written form on these challenges presented to you.
 
 * **Your ability to follow the instructions carefully as written here is part of the evaluation**.

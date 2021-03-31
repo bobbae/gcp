@@ -2,6 +2,8 @@
 
 From chapter 47 of the book Machine Learning and Deep Learning Models on Google Cloud Platform.
 
+https://github.com/Apress/building-ml-and-dl-models-on-gcp
+
 ## Overview
 
 Steps:

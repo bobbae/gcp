@@ -4,10 +4,10 @@
 * First, thank you for participating in the challenges!  
 
 * We have tried hard to make sure you will not spend more than a few
-hours to complete your answer.  Please do not spend more than a few hours!
+hours to complete your answer.  **Please do not spend more than a few hours!**
 
-* We still allow for 48 hours so that
-you can find a few hours in your schedule. Please return your work to us within 48 hours.
+* We still allow for **48 hours** so that
+you can find a few hours in your schedule. **Please return your work to us within 48 hours**.
 
 * **Pick one of the challenges in one of the directories here**. You can do more than one if you wish but we only require that you pick one and submit answers for one.
 
@@ -17,31 +17,10 @@ you can find a few hours in your schedule. Please return your work to us within 
 * Your answer will be completely original and not based on someone else's work. We are aware some challenges are available with
 solutions from various websites.  If your solution is based on any previous solutions, please clearly indicate the source.
 
-* Please submit your answer via gitlab or github within 48 hours of  learning about the challenge.
+* Please submit your answer via  a public gitlab or github repository you have created.
+Your repository should contain: code, documentation, tests, design notes, etc. 
 
-* Please make your git repository publicly accessible when submitting your answers, and send us the URL.
-
-* You can also use Codepen.io or Jupyter lab or equivalent to implement the solution and send us the publicly available link.
-
-* You can use any one of the following scripting or programming languages:  Python, Node.js, Java, Kotlin, Go, Rust.  
-
-* The challenges are described in the final and complete form. 
-
-* Whatever may be considered missing in the description of each challenge can be assumed to be intentional.  No further clarification will be provided.
-
-* Your understanding the description of the challenge in the presented form is part of the test as are the levels of completeness of your solutions.
-
-* Your abililty to come up with a solution for the problem as presented in each challenge description as written is part of the evaluation process. 
-
-* Your choices of programming tools, frameworks, methods and approaches are also part of the evaluation.
-
-* How quickly you respond and submit your solution also may influence the evaluation.
-
-* It is up to you to provide us a clear URL to a git repo
-that contains all that you think will be sufficient to let us know that you have provided the complete solutions to the problem which may include
-code, documentation, tests, design notes, etc. 
-
-* How you organize your repository, code, data, documentation and all artifacts in your repository will be part of the evaluation.
+* You can use any one of the following scripting or programming languages:  **Python, Node.js, Java, Kotlin, Go, Rust**.  
 
 * Your repository should contain a script called `run.sh` or `run.bat` that will run the
 code and produce the results.  That is to say, the reviewer of your work should just be able to run one script to see that it compiles if necessary 
@@ -49,6 +28,10 @@ and runs the program and produces the output with all of the necessary arguments
 
 * Your repository should contain a `README.md` file which provides information about the code, algorithm, design, and other related facts about your solutions.
 
-* You are encouraged to provide any feedback, criticism, or points for improvements in a written form on these challenges presented to you.
+* The challenges are described in the final and complete form. 
+
+* Whatever may be considered missing in the description of each challenge can be assumed to be intentional.  **No further clarification will be provided**.
+
+* You are encouraged to provide any corrections, feedback, criticism, or suggestions for improvements in writing.
 
 * **Your ability to follow the instructions carefully as written here is part of the evaluation**.

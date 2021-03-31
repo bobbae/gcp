@@ -1,14 +1,18 @@
 # Basic Rules for the Challenges 
 
 
-* First, thank you for participating in the challenges!  We have tried hard to make sure you will not spend more than a few
+* First, thank you for participating in the challenges!  
+
+* We have tried hard to make sure you will not spend more than a few
 hours to complete your answer.  Please do not spend more than a few hours!
 
 * We still allow for 48 hours so that
 you can find a few hours in your schedule. Please return your work to us within 48 hours.
 
 * **Pick one of the challenges in one of the directories here**. You can do more than one if you wish but we only require that you pick one and submit answers for one.
-Your choice of the challenges can influence the evaluation of your work. The completeness of your work can also influence the evaluation of your work.
+
+* Your choice of the challenges can influence the evaluation of your work. 
+* The completeness of your work can also influence the evaluation of your work.
 
 * Your answer will be completely original and not based on someone else's work. We are aware some challenges are available with
 solutions from various websites.  If your solution is based on any previous solutions, please clearly indicate the source.

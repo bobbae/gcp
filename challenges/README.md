@@ -11,16 +11,13 @@ you can find a few hours in your schedule. **Please return your work to us withi
 
 * **Pick one of the challenges in one of the directories here**. You can do more than one if you wish but we only require that you pick one and submit answers for one.
 
-* Your choice of the challenges can influence the evaluation of your work. 
-* The completeness of your work can also influence the evaluation of your work.
-
 * Your answer will be completely original and not based on someone else's work. We are aware some challenges are available with
 solutions from various websites.  If your solution is based on any previous solutions, please clearly indicate the source.
 
-* Please submit your answer via  a public gitlab or github repository you have created.
-Your repository should contain: code, documentation, tests, design notes, etc. 
-
 * You can use any one of the following scripting or programming languages:  **Python, Node.js, Java, Kotlin, Go, Rust**.  
+
+* Please submit your answer via  a public gitlab or github repository you have created.
+Your repository should contain: code, scripts, documentation, tests, design notes, etc. 
 
 * Your repository should contain a script called `run.sh` or `run.bat` that will run the
 code and produce the results.  That is to say, the reviewer of your work should just be able to run one script to see that it compiles if necessary 

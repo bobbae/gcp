@@ -9,7 +9,7 @@ hours to complete your answer.  **Please do not spend more than a few hours!**
 * We still allow for **48 hours** so that
 you can find a few hours in your schedule. **Please return your work to us within 48 hours**.
 
-* **Pick one of the challenges in one of the directories here**. You can do more than one if you wish but we only require that you pick one and submit answers for one.
+* **Pick one of the challenges in one of the directories here**. You can do more than one if you wish but we only require that you pick one and submit answers for one. The challenge `tennis-rain` is for discussion only and cannot be chosen as your only challenge. You must choose a coding challenge other than `tennis-rain` to return your answers.
 
 * Your answer will be completely original and not based on someone else's work. We are aware some challenges are available with
 solutions from various websites.  If your solution is based on any previous solutions, please clearly indicate the source.

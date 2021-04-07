@@ -11,9 +11,9 @@ should only spend maybe five minutes thinking about it.
 If you are looking for a coding challenge to submit for review, please look under another sub directory.
 This challenge is for a possible discussion topic during subsequent interviews. It is something you spend five minutes
 to think about.  We provide this challenge here so that we can save time during the interview.
-Note that you cannot choose this challenge as your only 
+**Note that you cannot choose this challenge as your only 
 challenge. You need to pick another challenge to complete and
-return for reviews.  This challenge is only for further discussions in
+return for reviews.** This challenge is only for further discussions in
 subsequent interviews if any.
 
 ## Steps

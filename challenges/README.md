@@ -25,7 +25,7 @@ and runs the program and produces the output with all of the necessary arguments
 
 * Your git repository should contain a `README.md` file which provides information about the code, algorithm, design, and other related facts about your solutions.
 
-* The challenges are described in the final and complete form. 
+* The challenges here are described in the final and complete form. 
 
 * Whatever may be considered missing in the description of each challenge can be assumed to be intentional.  **No further clarification will be provided**.
 

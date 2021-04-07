@@ -2,7 +2,7 @@
 
 * First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 
-* **Note that you cannot choose this challenge as your only challenge. You need to pick another challenge to complete andreturn for reviews.** 
+* **Note that you cannot choose this challenge as your only challenge. You need to pick another challenge to complete and return for reviews.** 
 
 * Summary: Given the description, come up with a prediction. This is not necessarily a `coding test`. You do
 not have to code anything.  You can simply write down what you think in text.   This is a quick challenge. You

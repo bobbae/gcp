@@ -16,7 +16,7 @@ solutions from various websites.  If your solution is based on any previous solu
 
 * You can use any one of the following scripting or programming languages:  **Python, Node.js, Java, Kotlin, Go, Rust**.  
 
-* Please submit your answer via  a public gitlab or github repository you have created.
+* Please submit your answer via  a public github repository you have created. **You should submit URL to your public github repo when you return your answers to us.**
 Your repository should contain: code, scripts, documentation, tests, design notes, etc. 
 
 * Your repository should contain a script called `run.sh` or `run.bat` that will run the

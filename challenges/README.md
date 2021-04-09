@@ -21,7 +21,8 @@ Your repository should contain: code, scripts, documentation, tests, design note
 
 * Your git repository should contain a script called `run.sh` or `run.bat` that will run the
 code and produce the results.  That is to say, **the reviewer of your work should just be able to run one script** to see that it compiles if necessary 
-and runs the program and produces the output with all of the necessary arguments and inputs required, without having to read line by line what you have created in your solutions.  
+and runs the program and produces the output with all of the necessary arguments and inputs required. If your script does not produce correct results the evaluation
+will be negative.
 
 * Your git repository should contain a `README.md` file which provides information about the input needed, output produced, the code, algorithm, design, and other related facts about your solutions.
 

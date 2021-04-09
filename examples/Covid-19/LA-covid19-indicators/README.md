@@ -1,4 +1,4 @@
-From: https://github.com/CityOfLosAngeles/covid19-indicator
+From: https://github.com/CityOfLosAngeles/covid19-indicators
 
 
 Scripts and Notebooks

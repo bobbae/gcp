@@ -1,0 +1,123 @@
+---
+font: Times New Roman
+fontsize: 10pt
+geometry: left=1in,right=1in,top=0.35in,bottom=0.6in
+header-includes: null
+output:
+  html_document:
+urlcolor: null
+params:
+  neighborhood: "Westwood"
+---
+
+
+```{r rmarkdown-setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+options(knitr.kable.NA = "")
+options(kableExtra.latex.load_packages = FALSE)
+
+#setwd("GitHub/covid19-indicators")
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(ggplot2)
+library(plotly)
+library(scales)
+library(glue)
+```
+
+
+# LA Coronavirus Trends by Neighborhood
+
+This report contains coronavirus data for LA County neighborhoods. We'll use it to demonstrate producing parameterized reports. 
+
+**LA is certainly an epicenter**. LA reached [5,000 deaths](https://www.latimes.com/california/story/2020-08-11/13000-more-coronavirus-cases-california-test-results-backlog) by mid-August, the 3rd highest US county by deaths, after Queens and Kings Counties in New York.
+
+### Cases and Deaths by Neighborhood
+
+The charts below look at total cases and deaths in `r params$neighborhood`. Data over the past week for `r params$neighborhood` is shown below:
+
+
+```{r echo=FALSE}
+# arbitrary data to demonstrate a table
+#today_date = sys.Date()
+data <- read.csv(file = "../data/la-county-neighborhood-time-series.csv", 
+                 header = TRUE, sep = ",", row.names(FALSE))
+
+data$date <- as.Date(factor(data$date))
+
+# Add new_cases and new_deaths columns
+neighborhood_df <- filter(data, Region == params$neighborhood) %>% 
+  mutate(
+    new_cases = cases - lag(cases), 
+    new_deaths = deaths - lag(deaths),
+    ) 
+
+#sapply(data, class)
+
+past_week <- neighborhood_df %>% 
+  select(c("Region", "date", "cases", "deaths")) %>%
+  tail(n=7) 
+
+
+
+# Print table of past week
+kable(past_week, format.args = list(big.mark = ",")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), 
+                position = "center", full_width = F) %>%
+  column_spec(1, bold = T, border_right = T) %>%
+  row_spec(0, bold = T)
+```
+
+
+```{r echo=FALSE}
+CASE_TITLE = "{params$neighborhood}: Total Cases"
+DEATH_TITLE = "{params$neighborhood}: Total Deaths"
+
+chart_aesthetics <- function(chart) {
+  chart <- chart +
+        theme(
+          plot.title = element_text(family = "Roboto", face = "bold", color = "#797C7C", 
+                                    size = 10, hjust=0.5), 
+          axis.title.x = element_text(size = 9), 
+          axis.title.y = element_text(size=9), 
+          axis.text.x = element_text(size=8)
+          ) +
+        scale_x_date(labels = date_format("%m-%d"), breaks = date_breaks("2 weeks")
+        ) 
+  
+  return(chart)
+}
+```
+This chart shows total cases over time.
+
+```{r echo=FALSE,  fig.width=6 , fig.height=4}
+# Cases chart
+cases_chart <- ggplot() + 
+      geom_line(
+        aes(y = cases, x = date), data = neighborhood_df, color = "#0A4C6A") +
+        xlab("date") + ylab("# cumulative cases") + 
+        ggtitle(glue(CASE_TITLE))
+
+cases_chart <- chart_aesthetics(cases_chart) %>% ggplotly()
+cases_chart
+```
+
+This chart shows total deaths over time (deaths data was collected by neighborhoods starting mid-July).
+
+```{r echo=FALSE, fig.width=6, fig.height=4}
+# Deaths chart
+deaths_chart <- ggplot() + 
+      geom_line(
+        aes(y = deaths, x = date), 
+        data = filter(neighborhood_df, date >= '2020-07-01'), 
+        color = "#F3324C") +
+        xlab("date") + ylab("# cumulative deaths") + 
+        ggtitle(glue(DEATH_TITLE))
+
+deaths_chart <- chart_aesthetics(deaths_chart) %>% ggplotly()
+deaths_chart
+```

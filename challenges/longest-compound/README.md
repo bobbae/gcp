@@ -22,5 +22,5 @@ The answer would be 'ratcatdogcat' - at 12 letters, it is the longest word made 
 * The program should then go on to report how many of the words in the list can be constructed of other words in the list.
 * The program should read the words from https://gist.github.com/bobbae/4ca309a1857158d5766d4ede4235cae0 
 * There are many solutions to this problem in github and elsewhere. We expect a new answer constructed by you from scratch.
-* Speed matters. Your solution's algorithm and execution speed in finding the answer matters. 
+* Speed matters. Your solution's algorithm and execution speed in finding the answer matters. For example,  if your program takes more than  one minute on a modern consumer grade laptop to produce the answers, your code needs to be revised.
 * Provide the answer (the longest compound word) in your README file.

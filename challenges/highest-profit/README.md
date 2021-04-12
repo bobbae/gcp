@@ -20,7 +20,7 @@ print out how many rows of data are left, after removing all the rows with inval
 
 ## Part 2
 
-* You can now convert the content your read into memory in your program in Part 1 into JSON format and write it out to another file called `data2.json` which should only contain rows of data that have the valid numeric profit values.
+* You can now convert the content your read into memory in your program in Part 1 into JSON format and write it out to another file called `data2.json` which should only contain rows of data that have the valid numeric profit values. Each row in the Array should contain data columns like year, rank, company, revenue, and profit.
 
 * Order the data based on the profit value.  Print the top 20 rows with the highest profit values. This is your third printed answer.
 

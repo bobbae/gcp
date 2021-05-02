@@ -1,20 +1,5 @@
-# Challenge:  tennis-rain
+# Question:  tennis-rain
 
-* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
-
-* **Note that you cannot choose this challenge as your only challenge. You need to pick another challenge to complete and return for reviews.** 
-
-* Summary: Given the description, come up with a prediction. This is not necessarily a `coding test`. You do
-not have to code anything.  You can simply write down what you think in text.   This is a quick challenge. You
-should only spend maybe five minutes thinking about it.
-
-## This is not a coding challenge
-
-If you are looking for a coding challenge to submit for review, please look under another sub directory.
-This challenge is for a possible discussion topic during subsequent interviews. It is something you spend five minutes
-to think about.  We provide this challenge here so that we can save time during the interview.
-This challenge is only for further discussions in
-subsequent interviews if any.
 
 ## Steps
 

@@ -7,3 +7,7 @@ For more details please try the [codelab](https://codelabs.developers.google.com
 ## Example
 
 https://github.com/MatthieuBlais/gcp-workflow-components
+
+## Compute Example
+
+Try out https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/connector-compute

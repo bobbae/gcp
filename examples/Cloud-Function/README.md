@@ -1,2 +1,4 @@
 
-From https://github.com/GoogleCloudPlatform/golang-samples/tree/master/functions
+https://cloud.google.com/functions/docs/quickstart-go
+
+

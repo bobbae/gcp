@@ -1,0 +1,30 @@
+- randomgenFunction:
+    call: http.get
+    args:
+        url: https://{{REGION}}-{{PROJECT_ID}}.cloudfunctions.net/randomgen
+    result: randomgenResult
+- multiplyFunction:
+    call: http.post
+    args:
+        url: https://{{REGION}}-{{PROJECT_ID}}.cloudfunctions.net/multiply
+        body:
+            input: ${randomgenResult.body.random}
+    result: multiplyResult
+- logFunction:
+    call: http.get
+    args:
+        url: https://api.mathjs.org/v4/
+        query:
+            expr: ${"log(" + string(multiplyResult.body.multiplied) + ")"}
+    result: logResult
+- floorFunction:
+    call: http.post
+    args:
+        url: {{RUNAPP_URL}}
+        auth:
+            type: OIDC
+        body:
+            input: ${logResult.body}
+    result: floorResult
+- returnResult:
+    return: ${floorResult}

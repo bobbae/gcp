@@ -6,12 +6,19 @@ For more details please try the [codelab](https://codelabs.developers.google.com
 
 ## Example
 
+### Samples
+
 https://github.com/GoogleCloudPlatform/workflows-samples
+
+#### Compute Example
+
+https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/connector-compute
+
+### Serverless ML Pipeline
+
+https://matthieublais.medium.com/gcp-serverless-ml-pipeline-be4e7b35315a
 
 https://github.com/MatthieuBlais/gcp-workflow-components
 
 
 
-## Compute Example
-
-Try out https://github.com/GoogleCloudPlatform/workflows-demos/tree/master/connector-compute

@@ -14,7 +14,7 @@ you can find a few hours in your schedule. **Please return your work to us withi
 * Your answer will be completely original and not based on someone else's work. We are aware some challenges are available with
 solutions from various websites.  If your solution is based on any previous solutions, please clearly indicate the source.
 
-* You can use any one of the following scripting or programming languages:  **Bash, SQL, YAML, Python, Node.js, Java, Kotlin, Go, Rust**.  If you must use another programming language please ask us first. Most questions listed here can be solved by using a small script, via shell prompt or shell script, or not using any programming languages at all. For example, you can just use YAML and SQL for some questions.
+* You can use any one of the following scripting or programming languages:  **Bash, SQL, YAML, Python, Node.js, Java, Kotlin, Go, Rust**.  If you must use another programming language please ask us first. Most questions listed here can be solved by using a small script, via shell prompt or shell script, or not using any programming languages at all. 
 
 * Please submit your answer via  **a public github repository** you have created. **You should submit URL to your public github repo when you return your answers to us.**
 Your repository should contain: code, scripts, documentation, tests, design notes, etc. 

@@ -17,10 +17,10 @@ solutions from various websites.  If your solution is based on any previous solu
 * You can use any one of the following scripting or programming languages:  **Bash, SQL, YAML, Python, Node.js, Java, Kotlin, Go, Rust**.  If you must use another programming language please ask us first. Most questions listed here can be solved by using a small script, via shell prompt or shell script, or not using any programming languages at all. 
 
 * Please submit your answer via  **a public github repository** you have created. **You should submit URL to your public github repo when you return your answers to us.**
-Your repository should contain: code, scripts, documentation, tests, design notes, etc. 
+Your repository should contain: the solutions, code (if any), scripts, documentation, tests, design notes, etc. 
 
 * Your git repository should contain a script called `run.sh` or `run.bat` that will run the
-code and produce the results.  That is to say, **the reviewer of your work should just be able to run one script** to see that it compiles if necessary 
+code (if any) and produce the results.  That is to say, **the reviewer of your work should just be able to run one script** to see that it compiles if necessary 
 and runs the program and produces the output with all of the necessary arguments and inputs required. If your script does not produce correct results the evaluation
 will be negative.
 

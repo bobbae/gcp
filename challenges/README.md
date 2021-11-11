@@ -10,7 +10,7 @@
 
 * You can use any scripting or programming languages as needed. 
 
-* Please submit your answer by submitting a URL to your own public github repository. 
+* Please submit your answer as a URL to your own public github repository. 
 
 * Your git repository should contain a `README` text file which provides information about the input needed, output produced, how to compile and run any relevant code, algorithms, design, and other related facts about your solutions. 
 

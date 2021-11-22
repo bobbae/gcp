@@ -6,13 +6,9 @@
 
 * Solve only one of the challenges in one of the directories here. 
 
-* Your answer should be completely original. 
+* Your solutions should be completely original. 
 
-* You can use any scripting or programming languages as needed. 
-
-* Please submit your answer as a URL to your own public github repository. 
-
-* Your git repository should contain a `README` text file which provides information about the input needed, output produced, how to compile and run any relevant code, algorithms, design, and other related facts about your solutions. 
+* Please submit your answer as a URL to your own public github repository which contains your entire solution including any documentation, code, examples and other materials. 
 
 * Whatever may be considered missing in the description of each challenge can be assumed to be intentional.  No further clarification will be provided.
 

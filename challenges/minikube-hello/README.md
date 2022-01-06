@@ -14,6 +14,13 @@
 
 * Deploy the app to minikube
 
+* Make the deployed service print SADA as a response
+
+```
+$ curl $(minikube ip)
+Hello SADA!
+```
+
 * Update the forked repository with files used to deploy the app
 
 * Send URL to your forked repository

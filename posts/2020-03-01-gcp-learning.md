@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Materials for learning about GCP 
-excerpt: 
+title: GCP Learning resources
+excerpt: Materials for learning about GCP and related topics
 date: 2020-03-01
 tags: gcp
 author: bob

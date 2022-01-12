@@ -2,6 +2,6 @@
 title: Links
 ---
 
-* [https://sada.com/about/sada-u/](https://sada.com/about/sada-u/)
-* [http://sadauniv.com](http://sadauniv.com)
+* [Google Cloud](https://cloud.google.com/)
+* [Wiki pages for GCP Learning](https://github.com/bobbae/gcp/wiki)
 

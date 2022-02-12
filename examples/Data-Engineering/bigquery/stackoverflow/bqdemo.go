@@ -36,6 +36,15 @@ func main() {
 		fmt.Println("GOOGLE_CLOUD_PROJECT environment variable must be set.")
 		os.Exit(1)
 	}
+	fmt.Println("using GOOGLE_CLOUD_PROJECT ", projectID)
+
+	securityAccount := os.Getenv("GOOGLE_APPLICATION_CREDENTIALS")
+	if securityAccount == "" {
+		fmt.Println("GOOGLE_APPLICATION_CREDENTIALS environment variable must be set.")
+		os.Exit(1)
+	}
+
+	fmt.Println("using GOOGLE_APPLICATION_CREDENTIALS " , securityAccount)
 
 	// [START bigquery_simple_app_client]
 	ctx := context.Background()

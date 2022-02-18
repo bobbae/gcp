@@ -7,13 +7,13 @@
  {
    "description": "year id",
    "name": "yearid",
-   "type": "string"
+   "type": "integer"
  }
  ,
  {
    "description": "game number",
    "name": "gamenum",
-   "type": "string"
+   "type": "integer"
  },
  {
    "description": "game id",
@@ -33,11 +33,11 @@
  {
    "description": "GP",
    "name": "GP",
-   "type": "string"
+   "type": "integer"
  },
  {
    "description": "staring position",
    "name": "startingpos",
-   "type": "string"
+   "type": "integer"
  }
 ]

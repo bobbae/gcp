@@ -1,0 +1,43 @@
+[
+ {
+   "description": "player id",
+   "name": "playerid",
+   "type": "string"
+ },
+ {
+   "description": "year id",
+   "name": "yearid",
+   "type": "string"
+ }
+ ,
+ {
+   "description": "game number",
+   "name": "gamenum",
+   "type": "string"
+ },
+ {
+   "description": "game id",
+   "name": "gameid",
+   "type": "string"
+ },
+ {
+   "description": "team id",
+   "name": "teamid",
+   "type": "string"
+ },
+ {
+   "description": "league id",
+   "name": "leagueid",
+   "type": "string"
+ },
+ {
+   "description": "GP",
+   "name": "GP",
+   "type": "string"
+ },
+ {
+   "description": "staring position",
+   "name": "startingpos",
+   "type": "string"
+ }
+]

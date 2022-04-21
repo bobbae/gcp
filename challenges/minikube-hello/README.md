@@ -12,11 +12,11 @@
 
 * Fork https://github.com/learnk8s/kubernetes-challenge
 
-* Make the deployed service print SADA as a response
+* Make the deployed service print MINIKUBE as a response
 
 ```
 $ curl $(minikube ip)
-Hello SADA!
+Hello MINIKUBE!
 ```
 
 * Deploy the app to minikube

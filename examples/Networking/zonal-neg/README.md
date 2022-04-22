@@ -55,7 +55,7 @@ echo "Page served from: $vm_hostname" | tee /var/www/html/index.html
 systemctl restart apache2
 
 gcloud compute ssl-certificates create lb1-cert \
-    --domains lb1.sadauniv.com
+    --domains lb1.example.com
 
 gcloud compute target-https-proxies create neg-su1-https-target-proxy \
     --ssl-certificates=lb1-cert \

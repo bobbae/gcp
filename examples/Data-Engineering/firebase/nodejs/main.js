@@ -2,11 +2,11 @@
 
 var admin = require("firebase-admin");
 
-var serviceAccount = require(`${process.env.HOME}/sada-univ-sess-2-305805-046954019201.json`);
+var serviceAccount = require(`${process.env.HOME}/example-2-305805-046954019201.json`);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://sada-univ-sess-2-305805-default-rtdb.firebaseio.com"
+  databaseURL: "https://example-2-305805-default-rtdb.firebaseio.com"
 });
 
 var db = admin.database();

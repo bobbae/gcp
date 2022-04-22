@@ -3,7 +3,7 @@ const gcs = require('./gcs');
 var keyFile = `${process.env.HOME}/key.json`;
 var project = `${process.env.PROJECT}`;
 
-var bucketName = 'sada-u'
+var bucketName = 'project-u'
 var fileName = 'gcs.js'
 
 async function listBucketsDemo() {

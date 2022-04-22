@@ -8,8 +8,8 @@ class NavBar extends React.Component {constructor(...args) {super(...args);_defi
     {
       content: [
       { id: 1, description: '<ul><li>We can help you build your website.</li><li>Have good connections with your clients.</li><li>Build a strong customers data base.</li></ul>' },
-      { id: 2, description: "<iframe src='https://sadasystems.looker.com/embed/public/8RK9QQF9HjfrfbS3zQHzsMs6R7PzC9Ns?type=table' width='600' height='338' frameborder='0'></iframe>" },
-      { id: 3, description: "<iframe src='https://sadasystems.looker.com/embed/public/8RK9QQF9HjfrfbS3zQHzsMs6R7PzC9Ns' width='600' height='338' frameborder='0'></iframe>" },
+      { id: 2, description: "<iframe src='https://example.looker.com/embed/public/8RK9QQF9HjfrfbS3zQHzsMs6R7PzC9Ns?type=table' width='600' height='338' frameborder='0'></iframe>" },
+      { id: 3, description: "<iframe src='https://example.looker.com/embed/public/8RK9QQF9HjfrfbS3zQHzsMs6R7PzC9Ns' width='600' height='338' frameborder='0'></iframe>" },
       { id: 4, description: '<h1>About is here</h1>' }],
 
       listItems: [

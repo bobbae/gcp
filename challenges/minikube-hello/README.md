@@ -1,8 +1,5 @@
-# Challenge:  Minikube-hello
 
-* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
-
-* Summary: Fork a repository and deploy the application to minikube 
+Fork a repository and deploy an application to minikube.
 
 ## Steps
 
@@ -27,8 +24,3 @@ Hello MINIKUBE!
 
 * Send URL to your forked repository
 
-## What to submit
-
-* Commit your deployment related `yaml` files to the forked repository
-
-* Send us the URL to your repository

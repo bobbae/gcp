@@ -1,8 +1,6 @@
-# Challenge: loomings
 
-* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md). 
 
-* Summary: Install minio, create a bucket, create bunch of files and process them. `minio` is a distributed cloud centric object storage that can mimick `s3`.
+Install minio, create a bucket, create bunch of files and process them. `minio` is a distributed cloud centric object storage that can mimick `s3`.
 
 ## Part 1
 

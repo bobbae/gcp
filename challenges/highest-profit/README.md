@@ -1,8 +1,4 @@
-# Challenge: highest-profit
-
-* First read the `Basic rules for challenges` (https://github.com/bobbae/gcp/blob/main/challenges/README.md).
-
-* Summary: Read a CSV file containing corporate profits over the years and create JSON format data and look for highest profit values in the data.
+Read a CSV file containing corporate profits over the years and create JSON format data and look for highest profit values in the data.
 
 ## Part 1
 

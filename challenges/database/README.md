@@ -6,7 +6,7 @@ Create the code and documentation for using CSV files under `data` directory to 
 
 ## Challenge 2
 
-Construct a SQL query that returns the titles of albums that can are priced greater than the average price of the albums of the particular artist. 
+Construct a SQL query that returns the titles of albums that are priced greater than the average price of the albums of the particular artist. 
 
 ## Challenge 3
 

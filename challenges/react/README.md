@@ -2,6 +2,8 @@
 
 This is a coding challenge for prospective front-end and full-stack developer candidates. If you're unfamiliar with React, Facebook has put together a helpful tutorial that provides a quick introduction to the basics: https://reactjs.org/docs/hello-world.html
 
+Do all the steps listed below.
+
 ## Goal:
 
 #### Build a simple React app that allows viewing and interacting with a grid of curated photos from Unsplash

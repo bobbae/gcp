@@ -1,5 +1,5 @@
 
-Fork a repository and deploy an application to minikube.
+Fork a repository and deploy an application to minikube. Do all the steps listed below.
 
 ## Steps
 

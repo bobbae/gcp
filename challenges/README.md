@@ -1,6 +1,6 @@
 # Please read this before proceeding
 
-* Solve only one of the challenges in one of the directories here. 
+* Choose one of the directories and complete the challenge described in the chosen directory. 
 
 * Please do not spend more than a couple of hours. 
 

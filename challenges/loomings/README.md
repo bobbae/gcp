@@ -1,6 +1,7 @@
 
 
 Install minio, create a bucket, create bunch of files and process them. `minio` is a distributed cloud centric object storage that can mimick `s3`.
+Do all the parts.
 
 ## Part 1
 

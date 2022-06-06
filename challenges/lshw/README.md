@@ -1,5 +1,5 @@
 
-Fill out JSON data structure containing system information and store it as a file with metadata on minio object storage
+Fill out JSON data structure containing system information and store it as a file with metadata on minio object storage. Do all the parts.
 
 
 ## Part 1

@@ -1,3 +1,9 @@
+provider "google" {
+  project = "xxxxxx"
+  region = "us-west1"
+  zone = "us-west1-a"
+}
+
 # [START compute_flask_quickstart_vm]
 # Create a single Compute Engine instance
 resource "google_compute_instance" "default" {

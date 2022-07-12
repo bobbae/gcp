@@ -1,0 +1,7 @@
+**/auth/*
+
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*

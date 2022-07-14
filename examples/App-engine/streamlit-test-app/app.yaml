@@ -1,0 +1,3 @@
+service: streamlit-test-app
+runtime: custom
+env: flex

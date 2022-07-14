@@ -1,7 +1,19 @@
 import streamlit as st
 import openai
 import os
+from google.cloud import secretmanager 
 
+secret_id = 'openai_api_key'
+project_id = 'acto-su-1'
+version = 1    # use the management tools to determine version at runtime
+
+client = secretmanager.SecretManagerServiceClient()
+
+name = f"projects/{project_id}/secrets/{secret_id}/versions/{version}"
+response = client.access_secret_version(request={"name":name})
+api_key = response.payload.data.decode('UTF-8')
+
+#print("api_key", api_key)
 st.title("Story Generator App")
 st.text("by Nobody Special")
 
@@ -25,7 +37,8 @@ with st.form(key="form"):
     st.text("(A typical story is usually 100-500 characters)")
 
     submit_button = st.form_submit_button(label='Generate story')
-    openai.api_key = os.getenv("OPENAI_API_KEY")
+    #openai.api_key = os.getenv("OPENAI_API_KEY")
+    openai.api_key = api_key
 
     if submit_button:
         with st.spinner("Generating story..."):

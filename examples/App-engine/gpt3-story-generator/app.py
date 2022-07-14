@@ -1,19 +1,20 @@
 import streamlit as st
 import openai
 import os
-from google.cloud import secretmanager 
+#from google.cloud import secretmanager 
 
-secret_id = 'openai_api_key'
-project_id = 'acto-su-1'
-version = 1    # use the management tools to determine version at runtime
+#secret_id = 'openai_api_key'
+#project_id = 'acto-su-1'
+#version = 1    # use the management tools to determine version at runtime
 
-client = secretmanager.SecretManagerServiceClient()
+#client = secretmanager.SecretManagerServiceClient()
 
-name = f"projects/{project_id}/secrets/{secret_id}/versions/{version}"
-response = client.access_secret_version(request={"name":name})
-api_key = response.payload.data.decode('UTF-8')
+#name = f"projects/{project_id}/secrets/{secret_id}/versions/{version}"
+#response = client.access_secret_version(request={"name":name})
+#api_key = response.payload.data.decode('UTF-8')
 
 #print("api_key", api_key)
+
 st.title("Story Generator App")
 st.text("by Nobody Special")
 
@@ -28,6 +29,7 @@ st.markdown("""
 st.markdown("# Generate a story")
 
 with st.form(key="form"):
+    api_key = st.text_input("Provide your API key here:")
     prompt = st.text_input("Describe the kind of story you want to be written.")
     st.text(f"(Example: Write me a funny story for children to enjoy)")
 

@@ -6,7 +6,7 @@ Train and test GPT-NEO
 
 ## testGPT-NEO-2.py
 
-Train and test GPT-NEO using hugging face interface
+Train and test GPT-NEO using huggingface interface
 
 ## testReal-ESRGAN.py
 

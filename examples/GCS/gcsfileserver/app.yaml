@@ -1,0 +1,8 @@
+runtime: go116
+main: ./
+handlers:
+- url: /.*
+  script: auto
+
+env_variables:
+  BUCKET: "bob-bucket-su-1"

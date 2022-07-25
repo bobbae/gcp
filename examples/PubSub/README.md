@@ -1,12 +1,19 @@
+# Demo to have GCS notify a message to pubsub topic when a file is created in a bucket.
+
+### service account
+
 Have service account keys pointed by 
 
 GOOGLE_APPLICATION_CREDENTIALS env var.
 
 Make sure you have pubsub role added to this service account.
 
+### add IAM policy binding to service account for pubsub role
+
 gcloud pubsub subscriptions add-iam-policy-binding  your-subscription-id --member serviceAccount:your-service-account@your-project.iam.gserviceaccount.com --role=roles/editor
 
 
+### running the demo
 Run this demo by doing:
 
 ```
@@ -17,13 +24,16 @@ export BUCKET=my-special-bucket
 python3 sub.py your-project-name your-subscription-id 
 ```
 
-assuming you have a project called `your-project-name` and you have created a subscription for a topic.
+### assumptions
+you should have a project called `your-project-name` and you have created a subscription for a topic.
 
 ```
 # create a topic
 gcloud pubsub topics create my-special-topic
 gcloud pubsub subscriptions create my-special-subscription --topic my-special-topic
 ```
+
+### test environment first before running the demo
 Before running this demo you may want to test out the topic
 
 ```

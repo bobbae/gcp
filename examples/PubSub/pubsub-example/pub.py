@@ -7,8 +7,8 @@ from concurrent import futures
 #gcloud pubsub topics publish my-special-topic --message '{ "kind": "hello" }'
 #gcloud pubsub subscriptions pull my-special-subscription --auto-ack
 
-project_id = "acto-su-1"
-topic_id = "realesrgan"
+project_id = "my-project-1"
+topic_id = "my-topic-1"
 
 publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(project_id, topic_id)

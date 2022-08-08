@@ -1,3 +1,4 @@
+from concurrent.futures import TimeoutError
 from google.cloud import pubsub_v1
 from PIL import Image
 #from IPython.display import display

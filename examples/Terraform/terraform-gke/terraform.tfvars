@@ -1,2 +1,2 @@
-project_id = "acto-su-1"
+project_id = "my-project-1"
 region     = "us-west1"

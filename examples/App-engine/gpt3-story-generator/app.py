@@ -4,7 +4,7 @@ import os
 #from google.cloud import secretmanager 
 
 #secret_id = 'openai_api_key'
-#project_id = 'acto-su-1'
+#project_id = 'my-project-1'
 #version = 1    # use the management tools to determine version at runtime
 
 #client = secretmanager.SecretManagerServiceClient()

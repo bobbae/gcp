@@ -18,8 +18,8 @@ from gfpgan import GFPGANer
 #pip install --upgrade google-cloud-pubsub
 #gcloud pubsub topics create my-topic
 #gcloud pubsub subscriptions create my-sub --topic my-topic
-project_id = "acto-su-1"
-subscription_id = "realesrgan-sub"
+project_id = "my-project-1"
+subscription_id = "my-subscription"
 
 class RESRGAN:
     def __init__(self, batch_size = 4):

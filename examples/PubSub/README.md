@@ -58,7 +58,7 @@ If this works, your demo should run OK.
 Just run
 
 ```
-python3 sub.py acto-su-1 bob-sub-1
+python3 sub.py my-project-1 my-subscription-1
 ```
 
 and in another window copy a file to the bucket, then you will get a notification message.

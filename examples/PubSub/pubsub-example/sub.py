@@ -8,8 +8,8 @@ import time
 #gcloud pubsub topics publish my-special-topic --message '{ "kind": "hello" }'
 #gcloud pubsub subscriptions pull my-special-subscription --auto-ack
 
-project_id = "acto-su-1"
-subscription_id = "realesrgan-sub"
+project_id = "my-project-1"
+subscription_id = "my-subscription"
 
 subscriber = pubsub_v1.SubscriberClient()
 subscription_path = subscriber.subscription_path(project_id, subscription_id)

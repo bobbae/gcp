@@ -80,7 +80,7 @@ with st.form(key="form"):
             st.markdown("____")
             st.markdown("### story prompt")
             st.markdown("#### " + story_prompt)
-            st.text(story)
+            st.markdown(story)
             st.markdown("____")
             for i in range(4):
                 fn = filename + str(i) + ".jpg"

@@ -1,9 +1,20 @@
 import streamlit as st
-from RealESRGAN import RESRGAN
+import socket
 from PIL import Image
 #import openai
 import os
 #from google.cloud import secretmanager 
+import transformers
+from transformers import BloomTokenizerFast, BloomModel
+from transformers import BloomForCausalLM
+from transformers import BloomTokenizerFast
+import torch
+
+#tokenizer = BloomTokenizerFast.from_pretrained("bigscience/bloom-350m")
+#model = BloomModel.from_pretrained("bigscience/bloom-350m")
+model = BloomForCausalLM.from_pretrained("bigscience/bloom-1b3")
+tokenizer = BloomTokenizerFast.from_pretrained("bigscience/bloom-1b3")
+result_length = 150
 
 #secret_id = 'openai_api_key'
 #project_id = 'acto-su-1'
@@ -15,25 +26,26 @@ import os
 #response = client.access_secret_version(request={"name":name})
 #api_key = response.payload.data.decode('UTF-8')
 
-#print("api_key", api_key)
+max_length = 1440
+port =  5000
+address = '127.0.0.1'
+
+client_socket = socket.socket()
+client_socket.connect((address,port))
+#client_socket.close()
 
 st.title("Image Generator App")
-st.text("by Nobody Special")
+st.markdown("#### by Nobody Special")
 
 st.markdown(""" 
 
-# About
+### About
  
-## Provide some prompts and generate images
+#### Provide some prompts and generate images
 
 """)
 
-reg = RESRGAN()
-print('initializing realESRGAN')
-with st.spinner("Reticulating splines ..."):
-    reg.get_ready()
-
-st.markdown("# Input")
+st.markdown("### Input")
 with st.form(key="form"):
     story_prompt = st.text_input("story prompt")
     filename = st.text_input("file name root")
@@ -48,19 +60,32 @@ with st.form(key="form"):
     #openai.api_key = api_key
 
     if submit_button:
-        with st.spinner("Generating image..."):
-            reg.gen_images(story_prompt, filename)
+        message = '{ "story_prompt": "' + story_prompt + '", "filename": "' + filename + '"}'
+        story = ''
+        if len(message) < max_length:
+            with st.spinner("Generating image..."):
+                data = message.encode()
+                client_socket.send(data)
+                inputs = tokenizer(story_prompt, return_tensors="pt")
+                story = tokenizer.decode(model.generate(inputs["input_ids"],
+                       max_length=result_length,
+                       num_beams=2,
+                       no_repeat_ngram_size=2,
+                       early_stopping=True
+                      )[0])
+                client_socket.recv(max_length)
 
-        st.markdown("# Generated images:")
-        st.subheader(filename)
-        st.markdown("____")
-        st.markdown("# story prompt")
-        st.text(story_prompt)
-        st.markdown("____")
-        for i in range(4):
-            fn = filename + str(i) + ".jpg"
-            image = Image.open(fn)
-            st.image(image, caption=fn)
-            #st.markdown("____")
+            st.markdown("### Generated images:")
+            st.markdown("#### " + filename)
+            st.markdown("____")
+            st.markdown("### story prompt")
+            st.markdown("#### " + story_prompt)
+            st.text(story)
+            st.markdown("____")
+            for i in range(4):
+                fn = filename + str(i) + ".jpg"
+                image = Image.open(fn)
+                st.image(image, caption=fn)
+                #st.markdown("____")
 
-        st.subheader("You can try again if you're unhappy with the model's output")
+            st.markdown("#### You can try again if you're unhappy with the model's output")

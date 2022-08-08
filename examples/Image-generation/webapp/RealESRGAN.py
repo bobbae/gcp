@@ -1,3 +1,5 @@
+import argparse
+import socket
 from PIL import Image
 #from IPython.display import display
 import torch as th
@@ -188,17 +190,20 @@ def run_server(port=5000, max_length=1440):
     server_socket.bind(('0.0.0.0', port))
     server_socket.listen(5)
     print("server socket litening on port ",port)
-    conn, address = server_socket.accept()
-    print("connection from " + str(address))
     while True:
-        data = conn.recv(max_length).decode()
-        if not data:
-            break
-        print(f"got {data}")
-        json_data = json.loads(data)
-        story_prompt = json_data["story_prompt"]
-        filename = json_data["filename"]
-        reg.gen_images(story_prompt, filename)
+        print("accepting connection")
+        conn, address = server_socket.accept()
+        print("connection from " + str(address))
+        while True:
+            data = conn.recv(max_length).decode()
+            if not data:
+                break
+            print(f"got {data}")
+            json_data = json.loads(data)
+            story_prompt = json_data["story_prompt"]
+            filename = json_data["filename"]
+            reg.gen_images(story_prompt, filename)
+            conn.send("done".encode())
 
     print("server exiting")
     conn.close()

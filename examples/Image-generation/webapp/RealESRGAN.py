@@ -1,9 +1,8 @@
-from concurrent.futures import TimeoutError
-from google.cloud import pubsub_v1
 from PIL import Image
 #from IPython.display import display
 import torch as th
 import numpy as np
+import json
 from imagen_pytorch.model_creation import create_model_and_diffusion as create_model_and_diffusion_dalle2
 from imagen_pytorch.model_creation import model_and_diffusion_defaults as model_and_diffusion_defaults_dalle2
 from transformers import AutoTokenizer
@@ -14,12 +13,6 @@ from basicsr.archs.rrdbnet_arch import RRDBNet
 from realesrgan import RealESRGANer
 from realesrgan.archs.srvgg_arch import SRVGGNetCompact
 from gfpgan import GFPGANer
-
-#pip install --upgrade google-cloud-pubsub
-#gcloud pubsub topics create my-topic
-#gcloud pubsub subscriptions create my-sub --topic my-topic
-project_id = "my-project-1"
-subscription_id = "my-subscription"
 
 class RESRGAN:
     def __init__(self, batch_size = 4):
@@ -125,6 +118,7 @@ class RESRGAN:
         #prompt = 'A photo of cat'#@param {type:"string"}
         #prompt = 'A unicorn rainbow dog on clouds'#@param {type:"string"}
         #print('text encoding tokenizer')
+        print(f"gen_images: {prompt} {filename_prefix}")
         if prompt == '' or filename_prefix == '':
             print('Error: Missing prompt or filename prefix')
             return
@@ -187,15 +181,34 @@ def test1():
     for prompt in prompts:
         reg.gen_images( prompt["story"] , prompt["filename"] )
     
-def run_server():
+def run_server(port=5000, max_length=1440):
     reg = RESRGAN()
     reg.get_ready()
-    subscriber = pubsub_v1.SubscriberClient()
-    subscription_path = subscriber.subscription_path(project_id, subscription_id)
-    def callback(message: pubsub_v1.subscriber.message.Message) -> None:
-        print(f"Received {message}.")
-        message.ack()
+    server_socket = socket.socket()
+    server_socket.bind(('0.0.0.0', port))
+    server_socket.listen(5)
+    print("server socket litening on port ",port)
+    conn, address = server_socket.accept()
+    print("connection from " + str(address))
+    while True:
+        data = conn.recv(max_length).decode()
+        if not data:
+            break
+        print(f"got {data}")
+        json_data = json.loads(data)
+        story_prompt = json_data["story_prompt"]
+        filename = json_data["filename"]
+        reg.gen_images(story_prompt, filename)
+
+    print("server exiting")
+    conn.close()
 
 if __name__ == '__main__':
     #test1()
-    run_server()
+    parser = argparse.ArgumentParser(description="realESRGAN socket server")
+    #parser.add_argument("-p","--port",type=int,default=5000,help="port",required=True)
+    parser.add_argument("-p","--port",type=int,default=5000,help="port")
+    parser.add_argument("-l","--max_length",type=int,default=1440,help="maximum number of bytes to read and write per message")
+    args = vars(parser.parse_args())
+    run_server(args["port"],args["max_length"])
+    print('exiting program')

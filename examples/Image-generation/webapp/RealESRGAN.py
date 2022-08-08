@@ -171,6 +171,17 @@ class RESRGAN:
                 imagefile_name = filename_prefix + str(j) + '.jpg'
                 cv2.imwrite(imagefile_name, new_img)
                 print('save image ', imagefile_name)
+                # img = Image.open(imagefile_name)
+                # w, h = img.size
+                # newsize = (w * 2, h* 2)
+                # newimg = img.resize(newsize)
+                # newimg.save(imagefile_name)
+                # from google.cloud import storage as gcs
+                # gcs_client = gcs.Client()
+                # bucket_name = 'mybucket'
+                # bucket = gcs_client.get_bucket(bucket_name)
+                # blob = gcs.Blob('blobxyz', bucket)
+                # blob.upload_from_filename(imagefile_name)
 
 def test1():
     reg = RESRGAN()

@@ -12,8 +12,8 @@ import torch
 
 #tokenizer = BloomTokenizerFast.from_pretrained("bigscience/bloom-350m")
 #model = BloomModel.from_pretrained("bigscience/bloom-350m")
-model = BloomForCausalLM.from_pretrained("bigscience/bloom-1b3")
-tokenizer = BloomTokenizerFast.from_pretrained("bigscience/bloom-1b3")
+#model = BloomForCausalLM.from_pretrained("bigscience/bloom-1b3")
+#tokenizer = BloomTokenizerFast.from_pretrained("bigscience/bloom-1b3")
 result_length = 150
 
 #secret_id = 'openai_api_key'
@@ -66,13 +66,13 @@ with st.form(key="form"):
             with st.spinner("Generating image..."):
                 data = message.encode()
                 client_socket.send(data)
-                inputs = tokenizer(story_prompt, return_tensors="pt")
-                story = tokenizer.decode(model.generate(inputs["input_ids"],
-                       max_length=result_length,
-                       num_beams=2,
-                       no_repeat_ngram_size=2,
-                       early_stopping=True
-                      )[0])
+                #inputs = tokenizer(story_prompt, return_tensors="pt")
+                #story = tokenizer.decode(model.generate(inputs["input_ids"],
+                #       max_length=result_length,
+                #       num_beams=2,
+                #       no_repeat_ngram_size=2,
+                #       early_stopping=True
+                #      )[0])
                 client_socket.recv(max_length)
 
             st.markdown("### Generated images:")
@@ -80,7 +80,7 @@ with st.form(key="form"):
             st.markdown("____")
             st.markdown("### story prompt")
             st.markdown("#### " + story_prompt)
-            st.markdown(story)
+            #st.markdown(story)
             st.markdown("____")
             for i in range(4):
                 fn = filename + str(i) + ".jpg"

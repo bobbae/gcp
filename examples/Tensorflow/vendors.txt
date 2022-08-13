@@ -1,5 +1,0 @@
-HGST
-Hitachi
-Seagate
-TOSHIBA
-WDC

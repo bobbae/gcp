@@ -1,0 +1,23 @@
+[
+  {
+    "get_message": {
+      "call": "http.get",
+      "args": {
+        "url": "https://helloworld-hjzj3l32pq-ucxyz.a.run.app",
+        "headers": {
+          "Content-Type": "text/plain"
+        },
+        "query": {
+          "some_val": "Hello World",
+          "another_val": 123
+        }
+      },
+      "result": "the_message"
+    }
+  },
+  {
+    "return_value": {
+      "return": "${the_message.body}"
+    }
+  }
+]

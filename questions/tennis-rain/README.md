@@ -6,18 +6,18 @@
 * Consider the following description:
 
    Suppose, from 4 tennis matches, 
-   Bob won 3 and Bill won only one.
+   Bob won 3 and Alice won only one.
 
 
-* Question 1:  If you have to bet on either Bob or Bill for the next match who would you bet on?
+* Question 1:  If you have to bet on either Bob or Alice for the next match who would you bet on?
 
-* Question 2: What is the percentage of the chance that Bill might win the next match?
+* Question 2: What is the percentage of the chance that Alice might win the next match?
 
 * Now, consider further:
 
    To make it more interesting, let us add another factor to the match,
    which is rain. 
-   When Bill won, it was raining. 
+   When Alice won, it was raining. 
    But, when Bob won, out of 3 matches, 1 
    time it was raining.
 
@@ -31,11 +31,11 @@
 
 * Question 3: Do you agree that even without thinking deeply, 
 you can tell that the comparison basis has 
-changed and chances of Bill winning have increased?
+changed and chances of Alice winning have increased?
 
 * Question 4: Who would you bet on as the winner of the next match?
 
-* Question 5: What is the percentage of the chance that Bill will win the next 
+* Question 5: What is the percentage of the chance that Alice will win the next 
 match given that it will rain tomorrow?
 
 ## What to prepare for further discussion

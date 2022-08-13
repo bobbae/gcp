@@ -31,6 +31,27 @@ gcloud components install datalab
 
 gcloud compute instances create yourname-instance-1 --zone us-central1-a --machine-type f1-micro --image-project ubuntu-os-cloud --image-family ubuntu-2104 --boot-disk-type pd-standard --boot-disk-size 30GB
 
+gcloud compute instances create simple-apache --metadata-from-file startup-script=install-apache.sh --metadata foo=bar
+
+---startup-script install-apache.sh-----
+#!/bin/bash
+VALUE_OF_FOO=$(curl http://metadata/computeMetadata/v1/instance/attributes/foo -H "Metadata-Flavor: Google")
+apt-get update
+apt-get install -y apache2
+cat <<EOF > /var/www/index.html
+<html><body><h1>Hello World</h1>
+<p>This page was created from a simple startup script!</p>
+<p>The value of foo: $VALUE_OF_FOO</p>
+</body></html>
+EOF
+--------------------
+
+gcloud compute firewall-rules describe allow-http
+
+gcloud compute firewall-rules list
+
+gcloud compute firewall-rules create http2 --description="Incoming http allowed."  --allow tcp:80
+
 gcloud compute firewall-rules create allow-8080 --allow=TCP:8080 --target-tags=allow-8080 --source-ranges=0.0.0.0/0
 
 gcloud compute instances add-tags your-company-u-general-instance-1  --zone us-west2-a --tags allow-8080
@@ -56,6 +77,8 @@ gcloud compute disk-types list --zones=asia-south1-a
  
 gcloud compute instances create myinstance --zone=asia-south1-a  --machine-type=f1-micro --image-project=centos-cloud --image-family=centos-7 --boot-disk-type=pd-standard --boot-disk-size=10GB
  
+gcloud compute instances get-serial-output INSTANCE
+
 gcloud compute instances list
  
 gcloud compute instances describe myinstance --zone=asia-south1-a 
@@ -327,6 +350,8 @@ gcloud pubsub topics delete cron-topic
 gcloud dataflow jobs list
 
 gsutil ls gs://dataflow-templates/latest
+
+gsutil setacl public-read gs://bucket/file
 
 gcloud pubsub subscriptions list
 
